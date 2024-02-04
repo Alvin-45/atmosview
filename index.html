@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATMOSVIEW</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06a3007841.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="fullbodycontent">
+<div class="wrapper">
+    <div class="sidebar">
+        <h2></h2>
+        <ul>
+            <li><a class="nlink" href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="nlink" href="./user.html"><i class="fas fa-user"></i>User Profile</a></li>
+            <li><a class="nlink" href="./about.html"><i class="fas fa-address-card"></i>About</a></li>
+            <li><a class="nlink" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a></li>
+            <li><a class="nlink" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a></li>
+            <li id="logout1" class="logout" onclick="logout()"><a class="nlink" href="#"><i class="fa-solid fa-right-from-bracket "></i>LogOut</a></li>
+            <!-- <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li> -->
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    
+    <div class="main_content">
+      <div class="othernav">
+        <nav class="navbar navbar-expand-lg nav1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ATMOSVIEW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./user.html"><i class="fas fa-user"></i>User Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a>
+                </li>
+                <li class="nav-item" onclick="logout()">
+                    <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Logout</a>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div class="header d-flex nonead" style="filter: opacity(0);"><input id="city" class="textbox rounded" type="text" placeholder="Search here"><div onclick="getweather()" class="searchbar"><i class="fa-solid fa-magnifying-glass glass" style="color: #030303;"></i>
+        </div>
+    </div>  
+    <div class="websitename"><h1 class="mainhead">ATMOSVIEW</h1></div>
+            <div class="wholecont ps-2 pe-2 ms-5">
+            <div class="leftpart">
+              <div class="f2 d-flex flex-wrap">
+                <div class="nw1">
+                  <h1 class="nhead">Bad weather forecast for Punjab, Haryana and Himachal</h1>
+                  <p class="text-secondary">A total of 485 roads and 4 National Highways have been closed in Himachal Pradesh due to severe weather conditions in the last 24 hours</p>
+                  <div class="newsncont d-flex">
+                    <img class="newspic" src="https://assets.cntraveller.in/photos/60ba2264253686a607d327eb/16:9/w_1024%2Cc_limit/himachal-pradesh-hotels-tourism-1366x768.jpg" alt="">
+                    <p class="ncont">In a  late evening weather update released by IMD Chandigarh for Punjab, Haryana and Chandigarh  issued an orange alert for the entire region. The update states that  light rainfall was observed in isolated places of the region Saturday morning. The forecast states ‘ Rainfall activity of light to moderate intensity very likely to start in the intervening night of Saturday and Sunday  from Southern parts of Haryana and  Punjab and subsequently will cover many parts of both states including Chandigarh during the next 24 hours. This spell is likely to be accompanied with thunderstorm, lightning, gusty winds (30-40 Kmph) with isolated hailstorms.  It will rain at isolated places on February 5 as well.</p>
+                  </div>
+                </div>
+                <div class="nw1">
+                  <h1 class="nhead">Delhi Weather Forecast: Weather will change in Delhi-Noida, there will be rain, know what information given by IMD</h1>
+                  
+                    
+                  <div class="newsncont d-flex"><img class="newspic" src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-10/11/full/1665500841-7743.jpg?im=FeatureCrop,size=(826,465)" alt="">
+                    <p class="ncont"><span class="text-secondary"> According to the Meteorological Department, rain activities can be seen in Delhi and surrounding areas on Sunday. Let us know what is the update on the weather of Delhi</span><br>Delhi-NCR Rains: Rain activities were seen in the country's capital New Delhi on Wednesday and Thursday. After this, it did not rain on Friday. Talking about today, there is no forecast of rain in New Delhi even today. However, according to the Meteorological Department, tomorrow i.e. on 4th February, the weather may once again take a turn in New Delhi and rain activities along with thunderstorms may be seen here. <a href="https://www.aajtak.in/india/delhi/story/delhi-weather-forecast-imd-predicts-rainfall-delhi-noida-ghaziabad-mausam-ka-haal-cold-weather-hplbs-1872145-2024-02-03">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="f2 d-flex flex-wrap">
+                <div class="nw1">
+                  <h1 class="nhead">Kolkata weather forecast and traffic alert for Sunday, February 4
+                  </h1><p class="text-secondary">The maximum and minimum temperatures on Sunday are likely to be around 26°C and 18°C, respectively.</p>
+                  
+                  <div class="newsncont d-flex">
+                    <img class="newspic" src="https://assets.telegraphindia.com/telegraph/2023/Jun/1685592269_traffic-kolkata-75.jpg" alt="">
+                    <p class="ncont"><span class="text-secondary">The maximum and minimum temperatures on Sunday are likely to be around 26°C and 18°C, respectively.</span>Rain activities were seen in the country's capital Kolkata on Wednesday and Thursday. After this, it did not rain on Friday. Talking about today, there is no forecast of rain in Kolkata even today. However, according to the Meteorological Department, tomorrow i.e. on 4th February, the weather may once again take a turn in Kolkata and rain activities along with thunderstorms may be seen here. <a href="https://www.telegraphindia.com/my-kolkata/news/kolkata-weather-forecast-and-traffic-alert-for-sunday-february-4/cid/1998258">Read More</a></p>
+                  </div>
+                </div>
+                <div class="nw1">
+                  <h1 class="nhead">Uttarakhand Weather: Rain and snowfall continue in the mountains.. Meteorological Department issued yellow alert</h1>
+                  <p class="text-secondary">Amar Ujala Network, Uttarakhand Published by: Renu Saklani Updated Sun, 04 Feb 2024 02:17 PM IST</p>
+                  <div class="newsncont d-flex">
+                    <img class="newspic" src="https://staticimg.amarujala.com/assets/images/2024/02/04/snowfall-in-uttarakhand_1707013295.jpeg?w=674&dpr=1.0" alt="">
+                    <p class="ncont">Today Weather in Uttarakhand: For the second time in the year, there is snowfall in the mountainous areas once again on Sunday. According to the forecast issued by the Meteorological Centre, there were chances of snowfall along with rain in areas at altitude of 2500 meters and above. Whereas heavy snowfall was reported in areas at a height of more than three thousand meters in Uttarkashi, Chamoli and Rudraprayag. The Meteorological Department has issued a yellow alert for these districts. Rain continues in other districts. <a href="https://www.amarujala.com/photo-gallery/dehradun/uttarakhand-weather-news-alert-rain-and-snowfall-in-mountains-char-dham-kedarnath-badrinath-gangotri-yamunotri-2024-02-04">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="f2 d-flex flex-wrap">
+                <div class="nw1">
+                  <h1 class="nhead">February 2024 Weather Forecast: Warmer Nights and Rainier Days In Store for India This Month, IMD Predicts</h1>
+                  
+                  <div class="newsncont d-flex">
+                    <img class="newspic" src="https://pbs.twimg.com/media/GFLGBgCawAAoBSW?format=jpg&name=small" alt="">
+                    <p class="ncont"><span class="text-secondary">The ushering of February signifies the gradual transition from the frosty grips of winter to the budding whispers of spring. While typically characterised by chilly winds interspersed with sporadic rain and snow, February 2024 may chart its own course, offering surprises beyond its 29-day span.</span><br>Across the Indian subcontinent, hotter-than-usual days await most parts of Northwest, West-Central and Northeast India, along with some areas of East-Central India. Conversely, the maximum temperatures are poised to hover around normal to below-normal levels across most of South Peninsular India, some portions of East-Central India and isolated pockets of Northeast India.</p>
+                  </div>
+                </div>
+                <div class="nw1">
+                  <h1 class="nhead">Tamil Nadu To Launch AI-Based Crop Specific Weather Forecast</h1><span class="text-secondary">Tamil Nadu’s Agricuultural University is the first in India to develop weather-based automated agro advisories with zero human intervention.</span>
+                  
+                  <div class="newsncont d-flex">
+                    <img class="newspic" src="https://media.assettype.com/outlookindia/2024-02/f48e7eb9-cd32-4795-a024-25d4049c39c7/Farming_Tamil_Nadu.jpg??w=480&auto=format%2Ccompress&fit=max" alt="">
+                    <p class="ncont"><br> The Tamil Nadu Agricultural University (TNAU) is all set to launch an Artificial Intelligence (AI)-based crop-specific weather forecast for farmers to reduce the crop failure risk.
+
+                      TNAU is the first in India to develop weather-based automated agro advisories with zero human intervention.“We intend extend this service to eight lakh farmers this year. Location, time and crop-specific micro-level advisory will help farmers reduce the risk of crop failure and harvest the potential from the crop. We will provide crop management, plant protection-related advisories and extreme weather events through the app,” another source with the TNAU said.</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <!-- <div></div> -->
+      </div>
+    </div>
+</div>
+</body>
+<script src="./index.js"></script>
+<script src="./user.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

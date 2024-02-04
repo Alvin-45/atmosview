@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06a3007841.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="fullbodycontent">
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>AtmosView</h2>
+        <ul>
+            <li><a class="nlink" href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="nlink" href="./user.html"><i class="fas fa-user"></i>User Profile</a></li>
+            <li><a class="nlink" href="./about.html"><i class="fas fa-address-card"></i>About</a></li>
+            <li><a class="nlink" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a></li>
+            <li><a class="nlink" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a></li>
+            <li id="logout1" class="logout"><a class="nlink" href="#"><i class="fa-solid fa-right-from-bracket "></i>LogOut</a></li>
+            <!-- <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li> -->
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="othernav">
+        <nav class="navbar navbar-expand-lg nav1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ATMOSVIEW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./user.html"><i class="fas fa-user"></i>User Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a>
+                </li>
+                <li class="nav-item" onclick="logout()">
+                    <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Logout</a>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div class="header d-flex" style="filter: opacity(0);"><input id="city" class="textbox rounded" type="text" placeholder="Search here"><div onclick="getweather()" class="searchbar"><i class="fa-solid fa-magnifying-glass glass" style="color: #030303;"></i>
+        </div>
+    </div>  
+        
+            <div class="banner" style="background-image: url(https://cognizant.scene7.com/is/image/cognizant/talent-worldwide-hero-banner); background-size: cover;">
+                <h1 class="text-center abhead">ABOUT US</h1>
+            </div>
+            <div class="wholecont ps-2 pe-2">
+            <p class="boxcont">Welcome to ATMOSVIEW – Your Ultimate Weather Companion!
+    
+                Atmosview is not just a weather forecasting and reporting website; it's your go-to source for comprehensive, accurate, and up-to-the-minute weather information. Developed with cutting-edge technology and launched today, we strive to revolutionize the way you experience and understand the ever-changing atmosphere around you.
+            </p>
+                <h4 class="ps-3 pe-3 mt-5 pt-5">Our Mission</h4>
+                <p class="ps-3 pe-3">At ATMOSVIEW, our mission is simple – to empower you with the knowledge and insights needed to make informed decisions about your daily activities, travel plans, and safety. We believe that access to accurate and timely weather data should be seamless and enjoyable, and that's what we deliver.</p>
+                <h4 class="ps-3 pe-3">Cutting-Edge Technology</h4>
+                <p class="ps-3 pe-3">Our website is built on the latest technology, leveraging advanced algorithms and real-time data feeds to provide you with the most precise and reliable weather forecasts. Whether you're checking the current temperature, planning a weekend getaway, or tracking a storm, ATMOSVIEW has you covered.</p>
+                <h4 class="ps-3 pe-3">User-Friendly Interface</h4>
+                <p class="ps-3 pe-3">Navigating through the world of weather data has never been easier. ATMOSVIEW boasts a user-friendly interface designed to cater to both weather enthusiasts and casual users alike. With intuitive controls and visually appealing displays, you can effortlessly explore a wealth of meteorological information with just a few clicks.</p>
+                <h4 class="ps-3 pe-3">Connect With Us</h4>
+                <p class="ps-3 pe-3">We love hearing from our users! Whether you have feedback, questions, or just want to share your weather experiences, connect with us through our social media channels or drop us an email. Your input helps us improve and enhance ATMOSVIEW to better serve you.
+                    <br>
+                    Welcome to a new era in weather forecasting. Welcome to ATMOSVIEW, where the atmosphere meets innovation. Stay informed, stay prepared, and embrace a weather experience like never before!</p>
+        </div>
+        <div id="form1" class="form">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" class="frm"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="frm"><br>
+            <label for="tarea">Comments:</label><br>
+            <textarea class="frm" name="" id="tarea" cols="55" rows="5"></textarea><br>
+            <button class="btn btn-outline-success mt-3" onclick="submit()">Submit</button>
+        </div>
+        <div class="text-center text-success">
+          <h3 id="result"></h3>
+        </div>
+          </div>
+          <!-- <div></div> -->
+      </div>
+    </div>
+</div>
+
+    </div>
+</body>
+<script src="./about.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

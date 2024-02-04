@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/06a3007841.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="./analysis.css">
+</head>
+<body>
+    <div class="fullbodycontent">
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>AtmosView</h2>
+        <ul>
+            <li><a class="nlink" href="./index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a class="nlink" href="./user.html"><i class="fas fa-user"></i>User Profile</a></li>
+            <li><a class="nlink" href="./about.html"><i class="fas fa-address-card"></i>About</a></li>
+            <li><a class="nlink" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a></li>
+            <li><a class="nlink" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a></li>
+            <li id="logout1" class="logout"><a class="nlink" href="#"><i class="fa-solid fa-right-from-bracket "></i>LogOut</a></li>
+            <!-- <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li> -->
+        </ul> 
+        <div class="social_media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="othernav">
+        <nav class="navbar navbar-expand-lg nav1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ATMOSVIEW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html"><i class="fas fa-home"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./user.html"><i class="fas fa-user"></i>User Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./loctions.html"><i class="fa-solid fa-location-crosshairs"></i></i>Loctions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Weather Anaysis</a>
+                </li>
+                <li class="nav-item" onclick="logout()">
+                    <a class="nav-link" href="./analysis.html"><i class="fa-solid fa-cloud"></i>Logout</a>
+                  </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+        <div class="header d-flex"><input id="city" class="textbox rounded" type="text" placeholder="Search here"><div onclick="getweather()" class="searchbar"><i class="fa-solid fa-magnifying-glass glass" style="color: #030303;"></i>
+        </div>
+    </div>  
+        <div id="info1" class="info d-flex">
+          <div class="left-part">
+              <div>
+                <h5 class="text-secondary">Current Location</h5>
+                <h5 id="cityname" class="locname text-dark">Mookkannoor, Ezhattumugham, Aluva, Ernakulam District, Kerala, 683577, India</h5>
+                <div id="currentloc1" class="currentloc img-fluid" style="background-image: url(https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2023/12/13180556/shutterstock_651736369-2-1024x619.jpg); width: 70%; height: 300px; background-size: cover; border-radius: 10px;">
+                    <img class="backbg" src="" alt="">
+                    <div class="imggrp">
+                        <div class="img-upper p-3">
+                            <div class="tempgrp">
+                                <div class="full-temp">
+                                    <img id="tempimg1" class="tempimg" src="./images/sun.png" alt="">
+                                </div>
+                                <h3 id="tempmeas" class="text-dark temp" style="font-size: 50px;">36.63<span  class="celsious" style="font-size: 20px; font-weight: 900;"><i class="fa-solid fa-o ocelsius" style="font-size: 10px; font-weight: 900;"></i>C</span></h3>
+                            </div>
+                            <div class="date">
+                                <h5 id="day" class="day text-primary">Sunday</h5>
+                                <div class="climate d-flex">
+                                    <img src="" alt="">
+                                    <p id="humid1" class="humid text-danger">Extremely HOT!!!
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                </div>
+              
+              <div>
+                <h5 class="text-dark">Today's Highlight</h5>
+                <div class="allboxes d-flex justify-content-around">
+                    <div class="box1">
+                        <p class="text-secondary">Precipitation</p>
+                        <p id="precipitation" class="fw-bolder no">0%</p>
+                    </div>
+                    <div class="box1">
+                        <p class="text-secondary">Humidity</p>
+                        <p id="humidity" class="fw-bolder no">34%</p>
+                    </div>
+                    <div class="box1">
+                        <p class="text-secondary">Wind</p>
+                        <p id="wind" class="fw-bolder no">0.13%</p>
+                    </div>
+                    <div class="box2">
+                        <p class="text-secondary">UV Index</p>
+                        <p id="sunrise" class="fw-bolder no">6%</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+              <div class="rightpart">
+                <h5 class="text-dark rhhead">Chance of Rain</h5>
+
+                <div class="a d-flex">
+                    <p class="text-dark">09 am</p>
+                    <div id="bar11" class="bar1 mt-2 ms-3"></div>
+                </div>
+                
+                <div class="b d-flex">
+                    <p class="text-dark">12 pm</p>
+                    <div id="bar12" class="bar2 mt-2 ms-3"></div>
+                </div>
+
+                <div class="c d-flex">
+                    <p class="text-dark">03pm</p>
+                    <div id="bar13" class="bar3 mt-2 ms-3"></div>
+                </div>
+
+                <div class="d d-flex">
+                    <p class="text-dark">06 pm</p>
+                    <div id="bar14" class="bar4 mt-2 ms-3"></div>
+                    </div>
+    
+                <div class="e d-flex">
+                <p class="text-dark">09 pm</p>
+                <div id="bar15" class="bar5 mt-2 ms-3"></div>
+                </div>
+
+                <div class="f d-flex">
+                    <p class="text-dark">12 am</p>
+                    <div id="bar16" class="bar6 mt-2 ms-3"></div>
+    
+                </div>
+                <div class="g d-flex">
+                    <p class="text-dark">03 am</p>
+                    <div id="bar17" class="bar7 mt-2 ms-3"></div>
+    
+                </div>
+                <div class="measures d-flex justify-content-between ps-5">
+                    <p class="text-dark">Sunny</p>
+                    <p class="text-dark">Rainy</p>
+                    <p class="text-dark">Heavy Rain</p>
+                </div>
+              </div>
+          </div>
+          <!-- <div></div> -->
+      </div>
+    </div>
+</div>
+
+    </div>
+</body>
+<script src="./weather.js"></script>
+<script src="./user.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
